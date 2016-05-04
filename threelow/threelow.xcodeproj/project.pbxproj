@@ -10,6 +10,7 @@
 		40F79FF51CDA2B5400D45303 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F79FF41CDA2B5400D45303 /* main.m */; };
 		40F79FFD1CDA2C5300D45303 /* Dice.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F79FFC1CDA2C5300D45303 /* Dice.m */; };
 		40F7A0001CDA3A0400D45303 /* GameControler.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F79FFF1CDA3A0400D45303 /* GameControler.m */; };
+		40F7A0021CDA728600D45303 /* InputCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F7A0011CDA728600D45303 /* InputCollector.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,8 @@
 		40F79FFC1CDA2C5300D45303 /* Dice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dice.m; sourceTree = "<group>"; };
 		40F79FFE1CDA39B800D45303 /* GameControler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameControler.h; path = ../GameControler.h; sourceTree = "<group>"; };
 		40F79FFF1CDA3A0400D45303 /* GameControler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameControler.m; sourceTree = "<group>"; };
+		40F7A0011CDA728600D45303 /* InputCollector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InputCollector.m; path = "../../../contact-list/contact-list/contact-list/InputCollector.m"; sourceTree = "<group>"; };
+		40F7A0031CDA729000D45303 /* InputCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InputCollector.h; path = "../../../contact-list/contact-list/contact-list/InputCollector.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,8 @@
 				40F79FFF1CDA3A0400D45303 /* GameControler.m */,
 				40F79FFB1CDA2C0F00D45303 /* Dice.h */,
 				40F79FFC1CDA2C5300D45303 /* Dice.m */,
+				40F7A0011CDA728600D45303 /* InputCollector.m */,
+				40F7A0031CDA729000D45303 /* InputCollector.h */,
 			);
 			path = threelow;
 			sourceTree = "<group>";
@@ -130,6 +135,7 @@
 			files = (
 				40F79FFD1CDA2C5300D45303 /* Dice.m in Sources */,
 				40F7A0001CDA3A0400D45303 /* GameControler.m in Sources */,
+				40F7A0021CDA728600D45303 /* InputCollector.m in Sources */,
 				40F79FF51CDA2B5400D45303 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

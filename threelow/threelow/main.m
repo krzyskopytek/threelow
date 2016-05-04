@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Dice.h"
 #import "GameControler.h"
+#import "InputCollector.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -17,10 +18,41 @@ int main(int argc, const char * argv[]) {
         GameControler *gameControler = [[GameControler alloc]init];
         
 
-        [gameControler rollDices];
-        [gameControler showDices];
+        //promptString
+        NSString *promptString = @"Do you want to play Threelow? (yes/no)";
+        
+        InputCollector *inputCollector = [[InputCollector alloc] init];
+        NSString *inputString;
+        
+        do {
+            inputString = [inputCollector inputForPrompt:promptString];
+            
+            if([inputString isEqualToString:@"yes"]){
+                
+                [gameControler rollDices];
+                [gameControler showDices];
+                
+                promptString = @"Your score is : ... \n Which dice do you want to hold? (1-5 or 0 for none)";
+                inputString = [inputCollector inputForPrompt:promptString];
+                
+                if([inputString isEqualToString:@"0"]){
+                    printf("Your final score is SCORE. Congrats!\n");
+                    break;
+                }
+                
+                
+            }
+            else {
+                
+                printf("Bye bye");
+                break;
+            }
+            
+        } while (true);
+        
         
         
     }
     return 0;
 }
+

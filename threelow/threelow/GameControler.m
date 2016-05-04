@@ -46,8 +46,6 @@
         
         for (Dice *dice in _collectionOfFiveDices){
             
-            //NSLog(@"%@",arrayOfFaces[[dice getValue]]);
-            // @property(readonly) const char *UTF8String
             NSString *s = arrayOfFaces[[dice getValue]];
             const char *c = s.UTF8String;
             printf("%s ", c);
