@@ -11,9 +11,11 @@
 @interface GameControler: NSObject
 
 @property NSMutableArray *collectionOfFiveDices;
+@property NSMutableArray *collectionOfFiveDicesStates;
 
 -(void) rollDices;
 -(void) showDices;
 -(int) score;
+-(void) setToHold :(int) index;
 
 @end

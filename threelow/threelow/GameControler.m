@@ -19,10 +19,12 @@
     if (!self) return nil;
     
     _collectionOfFiveDices = [[NSMutableArray alloc]init];
+    _collectionOfFiveDicesStates = [@[@(NO),@(NO),@(NO),@(NO),@(NO)] mutableCopy];
     
     for (int i=0; i<5; i++){
         
         [_collectionOfFiveDices addObject:[[Dice alloc]init]];
+
 
     }
                               
@@ -44,15 +46,23 @@
         
         NSArray *arrayOfFaces = @[@"\u2680",@"\u2681",@"\u2682",@"\u2683",@"\u2684",@"\u2685"];
         
+        int i=0;
         for (Dice *dice in _collectionOfFiveDices){
             
+            
+
+            if([_collectionOfFiveDicesStates[i] boolValue]) printf("[");
             NSString *s = arrayOfFaces[[dice getValue]];
             const char *c = s.UTF8String;
-            printf("%s ", c);
+            printf("%s", c);
+            if([_collectionOfFiveDicesStates[i] boolValue]) printf("]");
+            printf(" ");
+            i++;
         }
     
 }
 
+//returning score
 -(int)score{
 
     int score = 0;
@@ -65,6 +75,12 @@
     return score;
 }
 
+
+-(void)setToHold :(int) index {
+    
+    _collectionOfFiveDicesStates[index-1] = @(YES);
+    
+}
 
 
 
