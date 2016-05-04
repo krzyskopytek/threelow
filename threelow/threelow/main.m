@@ -32,11 +32,12 @@ int main(int argc, const char * argv[]) {
                 [gameControler rollDices];
                 [gameControler showDices];
                 
-                promptString = @"Your score is : ... \n Which dice do you want to hold? (1-5 or 0 for none)";
+                printf("\nYour score is : %i",[gameControler score]);
+                promptString = @"\nWhich dice do you want to hold? (1-5 or 0 for none)";
                 inputString = [inputCollector inputForPrompt:promptString];
                 
                 if([inputString isEqualToString:@"0"]){
-                    printf("Your final score is SCORE. Congrats!\n");
+                    printf("Your final score is %i. Congrats!\n",[gameControler score]);
                     break;
                 }
                 

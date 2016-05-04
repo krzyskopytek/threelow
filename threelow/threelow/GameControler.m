@@ -53,6 +53,19 @@
     
 }
 
+-(int)score{
+
+    int score = 0;
+    for (Dice *dice in _collectionOfFiveDices){
+        
+        score = score + [dice getValue];
+        
+    }
+    
+    return score;
+}
+
+
 
 
 

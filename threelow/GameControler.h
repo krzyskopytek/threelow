@@ -14,5 +14,6 @@
 
 -(void) rollDices;
 -(void) showDices;
+-(int) score;
 
 @end
