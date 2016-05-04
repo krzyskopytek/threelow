@@ -14,8 +14,9 @@
 @property NSMutableArray *collectionOfFiveDicesStates;
 
 -(void) rollDices;
--(void) showDices;
+-(int) showDices;
 -(int) score;
 -(void) setToHold :(int) index;
+-(void) setToUnHold :(int) index;
 
 @end

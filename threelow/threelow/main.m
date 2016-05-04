@@ -32,30 +32,49 @@ int main(int argc, const char * argv[]) {
                 [gameControler rollDices];
                 [gameControler showDices];
                 
+                // =======================================
+                // main game holding unholding and rolling
+                do {
+    
+                    
                 printf("\nYour score is : %i",[gameControler score]);
-                promptString = @"\nWhich dice do you want to hold? (1-5 or 0 for none)";
+                promptString = @"\nWhich dice do you want to hold? (1-5)"\
+                               "\nTo unhold dice add \"-\" before (like -2)"\
+                               "\nTo reroll type \"roll\" ->";
                 inputString = [inputCollector inputForPrompt:promptString];
+
+ 
+                if([inputString isEqualToString:@"roll"]){
+                    
+                    //reroll dices
+                    [gameControler rollDices];
+                    
+                }else{
+                    
+                    if([[inputString substringToIndex:1] isEqualToString:@"-"])
+                        [gameControler setToUnHold: [[inputString substringFromIndex:1] intValue]];
+                    else//hold particular dice
+                    [gameControler setToHold:[inputString intValue]];
                 
-                [gameControler setToHold:[inputString intValue]];
-                [gameControler showDices];
-                
-                
-                
-                if([inputString isEqualToString:@"0"]){
-                    printf("Your final score is %i. Congrats!\n",[gameControler score]);
-                    break;
                 }
+                 
+                    
+                if ([gameControler showDices] == 0);
+                else break; //end game
+                    
+                }while(true);
+                break;
+                // =======================================
                 
                 
             }
             else {
-                
-                printf("Bye bye");
                 break;
             }
             
+            
         } while (true);
-        
+        printf("\nBye bye"); //end of game
         
         
     }
