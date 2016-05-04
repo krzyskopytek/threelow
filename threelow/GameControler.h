@@ -1,5 +1,5 @@
 //
-//  Dice.h
+//  GameControler.h
 //  threelow
 //
 //  Created by Krzysztof Kopytek on 2016-05-04.
@@ -8,11 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Dice: NSObject
+@interface GameControler: NSObject
 
-@property int value;
+@property NSMutableArray *collectionOfFiveDices;
 
--(void) roll;
--(int)getValue;
+-(void) rollDices;
+-(void) showDices;
 
 @end

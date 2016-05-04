@@ -15,32 +15,9 @@
     _value = (arc4random() % 5) +1;
 }
 
--(void) show{
-        
-    switch(_value){
-            
-        case 0:
-            NSLog(@"\u2680");
-            break;
-        case 1:
-            NSLog(@"\u2681");
-            break;
-        case 2:
-            NSLog(@"\u2682");
-            break;
-        case 3:
-            NSLog(@"\u2683");
-            break;
-        case 4:
-            NSLog(@"\u2684");
-            break;
-        case 5:
-            NSLog(@"\u2685");
-            break;
-        default:
-            NSLog(@"Still in your hand");
-            break;
-    }
+
+-(int)getValue{
+    return _value;
 }
 
 @end

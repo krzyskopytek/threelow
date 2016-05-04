@@ -8,20 +8,17 @@
 
 #import <Foundation/Foundation.h>
 #import "Dice.h"
+#import "GameControler.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
         
+        GameControler *gameControler = [[GameControler alloc]init];
         
-        Dice *dice = [[Dice alloc]init];
-        
-        
-            for (int i =0; i<5; i++ ){
-                [dice roll];
-                [dice show];
-            }
-    
+
+        [gameControler rollDices];
+        [gameControler showDices];
         
         
     }
